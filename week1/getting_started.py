@@ -2,9 +2,9 @@
 A program to practice with some of the features of python.
 """
 
+
 def main():
-    pass
-    
+    pass    
     # print a greeting
 
     # store the greeting in a variable and print the greeting

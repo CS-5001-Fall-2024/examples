@@ -61,7 +61,7 @@ def main():
 	print('==================')
 
 	# Exercise 6
-	# if the value stored in the variable user_choice is not a valid rock, paper, scissors choice print
+	# if the value stored in the variable user_choice is not a valid rock,paper, scissors choice print
 	# 'Invalid choice'
 	# otherwise print
 	# 'Valid choice'
