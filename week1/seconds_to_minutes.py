@@ -17,8 +17,12 @@ You entered 90 seconds.
 """
 
 def main():
-    pass
-
+    seconds = int(input('Enter number of seconds: '))
+    print(type(seconds))
+    # + - * / % //
+    minutes = seconds / 60
+    print(f'You entered {seconds} seconds.')
+    print(f'{seconds} is {minutes} minutes.')
 
 if __name__ == '__main__':
 	main()	
