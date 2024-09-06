@@ -13,7 +13,6 @@ def main():
  	# How many tests do we need to do
 	# to ensure that our function
 	# is correct?
-	# we came up with 6 cases in class!
 	pass
 
 if __name__ == '__main__':
