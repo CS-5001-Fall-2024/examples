@@ -7,8 +7,9 @@ def welcome():
 	A function to print a multi-line welcome message.
 	You can print this documentation using 
 	print(welcome.__doc__)
-	"""
-	pass
+	"""	
+	print('Welcome!')
+	print('Glad to have you in 5001 class.')
 
 def greet_by_name(name: str):
 	"""Exercise 2:
@@ -17,7 +18,7 @@ def greet_by_name(name: str):
 	name: str
 		name of the user
 	"""
-	pass
+	print(f'Hello, {name}')
 
 def get_greeting() -> str:
 	"""Exercise 3:
@@ -26,7 +27,8 @@ def get_greeting() -> str:
 	str 
 		greeting provided by the user
 	"""
-	pass
+	greeting = input('What is your greeting? ')
+	return greeting
 
 def welcome_by_name_with_greeting(name: str, greeting: str=None):
 	"""Exercise 4:
@@ -38,12 +40,21 @@ def welcome_by_name_with_greeting(name: str, greeting: str=None):
 	greeting: str
 		greeting to use
 	"""
-	pass
-
+	print(f'{greeting}, {name}!')
 
 def main():
+	returned_greeting = get_greeting()	
+	welcome_by_name_with_greeting('Amber', returned_greeting)
+	welcome_by_name_with_greeting('Ashley')
+
+	# greet_by_name('Edwin')
+	# greet_by_name('Logan')
+
+	# print(welcome.__doc__)
 	# call functions!
-	pass
+	# welcome()
+	# welcome()
+	# welcome()
 
 if __name__ == '__main__':
 	main()
