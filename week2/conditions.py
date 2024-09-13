@@ -12,6 +12,13 @@ def main():
 	print('==================')
 	print('Exercise 1')
 	print('==================')	
+	
+	number = 15
+	if number < 10:
+		print('Number is small')
+	else:
+		print('Number is not small')
+
 
 	# # Exercise 2
 	# # if the value stored in the variable number
@@ -24,6 +31,13 @@ def main():
 	print('\n==================')
 	print('Exercise 2')
 	print('==================')
+	number = 5
+	if number > 15:
+		print('Seems like a big number')
+		print('Are you sure that\'s right?')
+	else:
+		print('Good job!')
+		print('You picked a good number')
 
 	# # Exercise 3
 	# # if the string stored in the variable animal
@@ -33,7 +47,15 @@ def main():
 	print('\n==================')
 	print('Exercise 3')
 	print('==================')
-
+	animal = 'cow'
+	if animal == 'dog':
+		print('woof')
+	elif animal == 'cow':
+		print('moo')
+	elif animal == 'bird':
+		print('chirp')
+	else:
+		print('unknown animal')
 
 	# Exercise 4
 	# if the value stored in the variable first_name
@@ -49,6 +71,15 @@ def main():
 	print('\n==================')
 	print('Exercise 4')
 	print('==================')
+	first_name = 'Sonny'
+	last_name = 'Rollins'
+
+	if first_name == 'Sami' and last_name == 'Rollins':
+		print('hey! that\'s my name')
+	elif first_name == 'Sami':
+		print('cool first name')
+	else:
+		print('cool last name')
 
 	# Exercise 5
 	# if the value stored in the variable user_choice is not a valid rock, paper, scissors choice print
@@ -59,6 +90,8 @@ def main():
 	print('\n==================')
 	print('Exercise 5')
 	print('==================')
+
+
 
 	# Exercise 6
 	# if the value stored in the variable user_choice is not a valid rock,paper, scissors choice print

@@ -15,12 +15,14 @@ You entered 90 seconds.
 # https://docs.python.org/3/tutorial/inputoutput.html
 
 """
+SECONDS_IN_A_MINUTE = 60
+NUM_OF_SECONDS_PROMPT = 'Enter number of seconds: '
 
 def main():
-    seconds = int(input('Enter number of seconds: '))
+    seconds = int(input(NUM_OF_SECONDS_PROMPT))
     print(type(seconds))
     # + - * / % //
-    minutes = seconds / 60
+    minutes = seconds / SECONDS_IN_A_MINUTE
     print(f'You entered {seconds} seconds.')
     print(f'{seconds} is {minutes} minutes.')
 
