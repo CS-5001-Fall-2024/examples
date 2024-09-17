@@ -11,9 +11,19 @@ def func2():
      print('goodbye')
      func1()
 
+def display_message(message: str):
+     print(message)
+     a = 15
+     print(a)
+     message = 'goodbye class'
+     return a, message
+
 def main():
-    # print(get_average(10, 20))
-    func2()
+    a = 6
+    message = 'hello, class!'
+    a, message = display_message(message)
+    print(a)
+    # print(message)
 
 if __name__ == '__main__':
 	main()
