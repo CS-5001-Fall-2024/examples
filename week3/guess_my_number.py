@@ -13,7 +13,6 @@ Phase 3:
 - keep track of the number of guesses too high and the
 number of guesses too low
 """
-
 import random
 LOW = 1
 HIGH = 10
@@ -45,9 +44,9 @@ def play():
     
     user_guess = get_user_guess()
     result = compare(secret_number, user_guess)
-    # while result == False:
-    # while result != True:
-    while not result: 
+    # while result == False: # option 1
+    # while result != True: # option 2
+    while not result: # option 3
         display_result(result)
         user_guess = get_user_guess()
         result = compare(secret_number, user_guess)

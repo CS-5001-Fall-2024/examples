@@ -3,13 +3,13 @@ PASSWORD = 'abc'
 
 def login():
     """Implement a function that prompts a 
-	user for a password until the actual 
-	password is entered and the user is 
-	authenticated.
+    user for a password until the actual 
+    password is entered and the user is 
+    authenticated.
 
-	Step 2: allow a maximum of three attempts.
+    Step 2: allow a maximum of three attempts.
 
-	"""
+    """
     # ask for initial password
     # while password is incorrect:
     #    tell you wrong password
@@ -19,7 +19,7 @@ def login():
     bad_attempts = 0
     
     while ((user_password != PASSWORD)
-	      and (bad_attempts < 2)):
+          and (bad_attempts < 2)):
          print('wrong password')
          bad_attempts = bad_attempts + 1
          user_password = input('password: ')
