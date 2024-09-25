@@ -50,13 +50,16 @@ def greater_than_100(values: list[int]) -> int:
     for item in values:
         if item > 100:
             count += 1
+            # count = count + 1
     return count
     # count = 0
     # i = 0
     # while i < len(values):
-    # 	if values[i] > 100:
-    # 		count += 1
-    # 	i = i + 1
+    #     item = values[i]
+    #     if item > 100:
+    #     # if values[i] > 100:
+    #     #     count += 1
+    #     i = i + 1
     # return count
     
 

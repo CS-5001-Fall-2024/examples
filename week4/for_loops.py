@@ -11,11 +11,25 @@ def fun_with_for_loops():
         i += 1
 
     # Iterating over a list is easier with a for loop!
+    for element in list:
+        # item hello
+        # item there
+        print(f'item: {element}')
 
     # Iterating over characters in a string
+    name = 'Armand'
+    for char in name:
+        print(char)
 
+    i = 0
+    for item in list:
+        print(f'{i} {item}')
+        i += 1
 
     # Accessing the index using range()
+    for i in range(len(list)):
+        item = list[i]
+        print(f'{i} {item}')
 
     # Accessing the index using enumerate
 
@@ -28,7 +42,12 @@ def multiples_of_5(number: int):
     uses a for loop to print the multiples of 5 that are 
     less than or equal to the number that was entered.
     """
-    pass
+    # for i in range(5, number+1, 5):
+    #     print(i)
+    for i in range(number+1):
+        if i % 5 == 0:
+            print(i)
+
 
 def generate_user_names(first_names: list[str], 
     last_names: list[str]) -> list[str]:
@@ -53,17 +72,31 @@ def nested_loops():
 def gradebook():
     pass
 
+VOWELS = ('a', 'e', 'i', 'o', 'u')
+
+def is_vowel(letter: str) -> bool:
+    return letter in VOWELS
+    # return (letter == 'a' 
+    #         or letter == 'e' 
+    #         or letter == 'i' 
+    #         or letter == 'o' 
+    #         or letter == 'u')
 
 def count_vowels(sentence: str) -> int:
     """
     A function that takes as input a string and returns the number
     of vowels (a, e, i, o, u) that are found in the sentence.
     """
-    pass
-
+    count = 0
+    for letter in sentence:
+        if is_vowel(letter):
+            count += 1
+    return count
 
 def main():
-    pass
+    fun_with_for_loops()
+    # multiples_of_5(15)
+    # print(count_vowels('hello'))
 
 if __name__ == '__main__':
     main()
