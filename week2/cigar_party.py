@@ -4,11 +4,12 @@ When squirrels get together for a party, they like to have cigars. A squirrel pa
 LOW_BOUNDARY = 40
 HIGH_BOUNDARY = 60
 
+
 def cigar_party(cigars: int, is_weekend: bool) -> bool:
 	"""Return True if the party is successful and False
 	otherwise.
 	"""
-	return not ((cigars < LOW_BOUNDARY) 
+	return not ((cigars < LOW_BOUNDARY)
 	 or (cigars > HIGH_BOUNDARY and not is_weekend))
 
 	# if ((cigars < LOW_BOUNDARY) 

@@ -7,7 +7,12 @@ def factorial_iterative(n: int) -> int:
     A function that takes as a parameter an integer and returns the 
     factorial of that number.
     """
-    pass
+    product = 1
+    while n > 0:
+        product = product * n
+        n = n - 1        
+    return product
+    
 
 def factorial_recursive(n: int) -> int:
     """
@@ -15,7 +20,10 @@ def factorial_recursive(n: int) -> int:
     factorial of that number.
     This implementation does not use a loop.
     """
-    pass
+    if n == 1:
+        return 1
+    return n * factorial_recursive(n - 1)
+
 
 def print_string(string: str):
     """
@@ -23,7 +31,12 @@ def print_string(string: str):
     a str and prints the characters of the str one per 
     line *without using a loop*. 
     """
-    pass
+    if len(string) == 1:
+        print(string)
+        return
+    # else:
+    print(string[0])
+    print_string(string[1:])
 
 
 def print_string_backward(string: str):
@@ -32,7 +45,10 @@ def print_string_backward(string: str):
     a str and prints the characters of the str *in 
     reverse* one per line *without using a loop*. 
     """
-    pass
+    if len(string) == 0:
+        return    
+    print_string_backward(string[1:])    
+    print(string[0])
 
 
 def print_nums_iterative(n: int):
@@ -76,7 +92,8 @@ def binarysearch(list: list[int], target: int) -> bool:
      pass
 
 def main():
-    pass
+    # print(factorial_recursive(4))
+    print_string_backward('hello')
 
 if __name__ == '__main__':
     main()
