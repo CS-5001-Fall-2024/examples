@@ -97,7 +97,7 @@ def find_char_a(string: str, sum: int = 0) -> int:
     #     return 0
     # if string[0] == 'a':
     #     return 1 + find_char_a(string[1:])
-    # return find_char_a(string[1:])
+    # return find_char_a(string [1:])
 
 
 
