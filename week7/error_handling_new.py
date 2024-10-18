@@ -48,8 +48,8 @@ def get_filename_and_read_file():
         try:
             read_file(filename)
             success = True
-        except FileNotFoundError as bob:
-            print(bob)
+        except FileNotFoundError as fnf:
+            print(fnf)
             print(f'Unable to find file {filename}')  
 
 
@@ -95,8 +95,9 @@ def pass_by_reference(local_list: list[str]):
 
 def main():
 
-    search_replace('bob', 'fnf', 'week7/error_handling.py', 'week7/error_handling_new.py')
+    search_replace('fnf', 'fnf', 'week7/error_handling.py', 'week7/test.py')
 
+    # search_replace('fnf', 'fnf', 'week7/error_handling.py', 'week7/error_handling_new.py')
     # filename = 'print_triangle.py'
     
     # read_file(filename)
