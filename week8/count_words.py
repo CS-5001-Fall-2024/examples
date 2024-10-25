@@ -28,7 +28,6 @@ def count_words(filename: str) -> dict[str, int]:
     return word_to_count
 
 
-
 def top_n(mapping: dict[str, int], n: int):
     """Print the n key words from the dictionary mapping with the highest
     values.
@@ -45,21 +44,28 @@ def top_n(mapping: dict[str, int], n: int):
     # mapping.values()
     # mapping.items()
     # First cut to find just the top 1 item
-    max_item = None
-    for item in mapping.items():
-        if (not max_item 
-            or item[1] > max_item[1]
-            ):
-            max_item = item
-    print(max_item)
+    # max_item = None
+    # for item in mapping.items():
+    #     if (not max_item or item[1] > max_item[1]):
+    #         max_item = item
+    # print(max_item)
 
-
+    # print(sorted(mapping.items()))
     # Option 1 using a list comprehension
-    
-    # Option 2 using a lambda function as a key    
+    # mapping = {}    
+    # items = [(value, key) for key, value in mapping.items()]
+    # sorted_items = sorted(items, reverse=True)
+    # print(sorted_items)
+    # result = sorted_items[:n]
+    # print(result)
+    # for value, key in result:
+    #     print(key)
+
+    # Option 2 using a lambda function as a key
+    result = sorted(mapping.items(), key=lambda x:x[0]+str(x[1]), reverse=True)
+    print(result)
 
 def get_average_for_student(student_name, data):
-    
     if student_name not in data:
         return -1
 
@@ -75,8 +81,8 @@ def get_average_for_student(student_name, data):
     # get the scores list from scores at position index
     # sum scores in the list and divide by length of list
 
-def lists_to_dictionary():
 
+def lists_to_dictionary():
     # maps key -> value
     data = {
         'Logan': [100, 100, 100],
@@ -85,12 +91,11 @@ def lists_to_dictionary():
     data['Pari'] = [90, 88.5, 92]
     data['Ashley'] = [72, 88, 75]
     data['Marisa'] = [90, 90.5, 100]
-    
+
     return data
 
     # for item in data.values():
     #     print(item)
-
 
     # Option 1: parallel lists
     # names = ['Pari', 'Igor', 'Marisa']
@@ -104,12 +109,14 @@ def lists_to_dictionary():
     #     print(name)
     #     print(score_list)
 
+
 def main():
     # data = lists_to_dictionary()
     # result = get_average_for_student('Edwin', data)
     # print(result)
     result = count_words('cat.txt')
-    top_n(result, 1)
+    print(result)
+    top_n(result, 2)
     # print(result['the'])
 
 
