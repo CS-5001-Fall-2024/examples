@@ -18,7 +18,8 @@ class Student:
         Parameter:
           grade (float): new grade to be added
         """
-        if grade > 0:
+        # self.grades.append(grade)
+        if isinstance(grade, int) and grade > 0:
             self.grades.append(grade)
         # print(self.grades)
 
@@ -33,3 +34,7 @@ class Student:
 
     def __str__(self):
         return f'{self.name} - {self.id} - {self.grades}'
+    
+    def __repr__(self):
+        return f'{self.name} - {self.id} - {self.grades}'
+    
