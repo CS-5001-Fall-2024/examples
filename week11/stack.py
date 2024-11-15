@@ -9,7 +9,8 @@ class Stack:
         Parameters:
         max_size -- max number of items in the stack
         """
-        pass
+        self.items = []
+        self.max_size = max_size
 
     def push(self, item):
         """ Adds a new item to the top of the stack
@@ -21,7 +22,9 @@ class Stack:
         Exception -- if the stack is full
 
         """
-        pass
+        if len(self.items) == self.max_size:
+            raise Exception('Stack full!')
+        self.items.append(item)
 
 
     def pop(self):
@@ -33,12 +36,15 @@ class Stack:
         Raises:
         Exception -- if the stack is empty
         """
-        pass
+        if len(self.items) == 0:
+            raise Exception('Stack is empty!')
+        item = self.items.pop()
+        return item
 
     def size(self):
         """ Returns the number of items in the stack.
         """
-        pass
+        return len(self.items)
     
 
     def debug(self):

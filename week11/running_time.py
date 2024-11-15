@@ -1,7 +1,7 @@
 import time
 
 list = []
-for i in range(90000):
+for i in range(900000):
 	list.append(i)
 print('...list built...')
 
