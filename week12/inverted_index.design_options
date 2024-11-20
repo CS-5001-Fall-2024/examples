@@ -1,0 +1,45 @@
+
+# Option 3
+
+def build_index(directory):
+    # index = Index()
+    # for each file
+    # for each word
+    #     index.add_position(file, word, position)
+
+
+# Option 2
+class InvertedIndex:
+
+    def __init__(self, directory):
+        # open file
+        # read in contents
+        # build dictionary -- self.inverted_index
+        # return dictionary
+    
+    def write_to_file(self, filename):
+        # for all items in self.index
+        # save those items to file
+
+    def search(self, query):
+        return self.inverted_index[query]
+
+
+        
+index = IndexIndex(directory)
+index.write_to_file(filename)
+
+
+# Option 1
+def build_index(fiilename) -> dict:
+    # open file
+    # read in contents
+    # build dictionary
+    # return dictionry
+
+
+def write_index(index):
+    # for each item in index dictionary...write it out
+
+index = build_index('filename')
+write_index(index)
