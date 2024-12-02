@@ -1,0 +1,15 @@
+<!doctype html>
+  <title>Message Board</title>
+
+  <h1>{{ items[0].author }}</h1>
+
+  <h2>Messages:</h2>
+   <ul>
+     {% for item in items %}
+        <li>{{ item.message }} -- by <a href="/author/{{ item.author }}">{{ item.author }}</a></li>
+     {% endfor %}
+   </ul>
+
+   <a href="/messages/">Return to Home</a>
+
+</html>

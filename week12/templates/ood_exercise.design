@@ -1,0 +1,56 @@
+https://github.com/CS-5001-Fall-2024/Resources/blob/main/Schedule.md
+
+
+
+
+
+TaskList
+
+- name (cs 5001)
+- by_task_id (dictionary task_id -> Task)
+- by_tag (dictionary tag -> list of Task)
+- completed_tasks (list of Task)
+- incomplete_tasks (list of Task)
+
+- add_task(self, task)
+    # todo: error checking
+    self.by_task_id[task.task_id] = task
+
+    if task.completed:
+        self.completed_tasks.append(task)
+    else:
+        self.incomplete_tasks.append(task)
+
+    for tag in task.tags:
+        if tag in self.by_tag:
+            self.by_tag[tag].append(task)
+        else:
+            new_list = []
+            new_list.append(task)
+            self.by_tag[tag] = new_list
+    
+
+- get_by_category(catgegory)
+    # Option 1
+    result = []
+    for task in by_task_id.values():
+        if task.tags contains category     
+            add task to result
+    return result
+
+    # Option 2
+    return by_tag[category]
+
+
+- mark_as_completed(task_id)
+    by_task_id.[task_id].change_status(True)
+    completed_tasks.append(by_task_id[task_id])
+
+- show_completed()
+    # option 1
+    for value in by_task_id dictionary:
+        if value.completed is True:
+            show value
+    # option 2
+    for task in completed_tasks:
+        show task
